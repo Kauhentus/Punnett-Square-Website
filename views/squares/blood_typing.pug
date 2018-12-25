@@ -1,0 +1,130 @@
+extends ../layouts/square_layout
+
+block content
+    hr
+    h1(class='white_text')= title
+    p(class='white_text') Blood Typing Punnett Square Cross
+    p(class='white_text') 2 x 2 Punnett Square with Blood Types
+    hr  
+
+block square
+    .table
+        table
+            tr
+                th(class='mono') &nbsp;
+                th(class='mono') 
+                    | !{_a1[0][0]}
+                    sup !{_a1[0][1]}
+                th(class='mono')
+                    | !{_a1[1][0]}
+                    sup !{_a1[1][1]}
+            tr
+                th(class='mono')
+                    | !{_a2[0][0]}
+                    sup !{_a2[0][1]}
+                td(class='mono')
+                    | !{cross[0][0][0]}
+                    sup !{cross[0][0][1]}
+                    | !{cross[0][0][2]}
+                    sup !{cross[0][0][3]}
+                td(class='mono')
+                    | !{cross[0][1][0]}
+                    sup !{cross[0][1][1]}
+                    | !{cross[0][1][2]}
+                    sup !{cross[0][1][3]}
+            tr
+                th(class='mono') 
+                    | !{_a2[1][0]}
+                    sup !{_a2[1][1]}
+                td(class='mono')
+                    | !{cross[1][0][0]}
+                    sup !{cross[1][0][1]}
+                    | !{cross[1][0][2]}
+                    sup !{cross[1][0][3]}
+                td(class='mono')
+                    | !{cross[1][1][0]}
+                    sup !{cross[1][1][1]}
+                    | !{cross[1][1][2]}
+                    sup !{cross[1][1][3]}
+    
+block formblock
+    div(class='pad_around')
+        h1(class='white_text center_align') Parameters
+    
+        form(class='inputs pad_top' method='post' action='')
+            hr
+            h2(class='white_text center_align') Parent 1
+            hr
+            div
+                div
+                    label(for='p1_a1' class='white_text pad_top margin_right pad_right') Allele 1
+                    label(for='p1_a1_1' class='white_text margin_top') I
+                    input(type='radio' name='p1_a1_1' value='I' class='margin_right' checked=selected_alleles[0][0][0])
+                    label(for='p1_a1_1' class='white_text margin_top') i
+                    input(type='radio' name='p1_a1_1' value='i' checked=selected_alleles[0][0][1])
+                    label(for='p1_a1_1' class='white_text pad_left') T1
+                    br
+                    label(for='p1_a1_2' class='white_text margin_top') I
+                    input(type='radio' name='p1_a1_2' value='I' class='margin_right' checked=selected_alleles[0][1][0])
+                    label(for='p1_a1_2' class='white_text margin_top') i
+                    input(type='radio' name='p1_a1_2' value='i' checked=selected_alleles[0][1][1])
+                    label(for='p1_a1_2' class='white_text pad_left') T2
+                    br
+                div(class='pad_top')
+                    label(for='p1_a1_S' class='white_text pad_right margin_top margin_right') Superscript 1
+                    label(for='p1_a1_1s' class='white_text margin_top') A
+                    input(type='radio' name='p1_a1_1s' value='A' class='margin_right' checked=selected_superscripts[0][0][0])
+                    label(for='p1_a1_1s' class='white_text margin_top') B
+                    input(type='radio' name='p1_a1_1s' value='B' class='margin_right' checked=selected_superscripts[0][0][1])
+                    label(for='p1_a1_1s' class='white_text margin_top') -
+                    input(type='radio' name='p1_a1_1s' value='-' checked=selected_superscripts[0][0][2])
+
+                    br
+                    label(for='p1_a1_2s' class='white_text margin_top') A
+                    input(type='radio' name='p1_a1_2s' value='A' class='margin_right' checked=selected_superscripts[0][1][0])
+                    label(for='p1_a1_2s' class='white_text margin_top') B
+                    input(type='radio' name='p1_a1_2s' value='B' class='margin_right' checked=selected_superscripts[0][1][1])
+                    label(for='p1_a1_2s' class='white_text margin_top') -
+                    input(type='radio' name='p1_a1_2s' value='-' checked=selected_superscripts[0][1][2])
+                    br
+
+            hr(class='margin_top')
+            h2(class='white_text center_align') Parent 2
+            hr
+
+            div
+                div
+                    label(for='p2_a1' class='white_text pad_top margin_right pad_right') Allele 1
+                    label(for='p2_a1_1' class='white_text margin_top') I
+                    input(type='radio' name='p2_a1_1' value='I' class='margin_right' checked=selected_alleles[1][0][0])
+                    label(for='p2_a1_1' class='white_text margin_top') i
+                    input(type='radio' name='p2_a1_1' value='i' checked=selected_alleles[1][0][1])
+                    label(for='p2_a1_1' class='white_text pad_left') T1
+                    br
+                    label(for='p2_a1_2' class='white_text margin_top') I
+                    input(type='radio' name='p2_a1_2' value='I' class='margin_right' checked=selected_alleles[1][1][0])
+                    label(for='p2_a1_2' class='white_text margin_top') i
+                    input(type='radio' name='p2_a1_2' value='i' checked=selected_alleles[1][1][1])
+                    label(for='p2_a1_2' class='white_text pad_left') T2
+                    br
+                div(class='pad_top')
+                    label(for='p2_a1_S' class='white_text pad_right margin_top margin_right') Superscript 1
+                    label(for='p2_a1_1s' class='white_text margin_top') A
+                    input(type='radio' name='p2_a1_1s' value='A' class='margin_right' checked=selected_superscripts[1][0][0])
+                    label(for='p2_a1_1s' class='white_text margin_top') B
+                    input(type='radio' name='p2_a1_1s' value='B' class='margin_right' checked=selected_superscripts[1][0][1])
+                    label(for='p2_a1_1s' class='white_text margin_top') -
+                    input(type='radio' name='p2_a1_1s' value='-' checked=selected_superscripts[1][0][2])
+
+                    br
+                    label(for='p2_a1_2s' class='white_text margin_top') A
+                    input(type='radio' name='p2_a1_2s' value='A' class='margin_right' checked=selected_superscripts[1][1][0])
+                    label(for='p2_a1_2s' class='white_text margin_top') B
+                    input(type='radio' name='p2_a1_2s' value='B' class='margin_right' checked=selected_superscripts[1][1][1])
+                    label(for='p2_a1_2s' class='white_text margin_top') -
+                    input(type='radio' name='p2_a1_2s' value='-' checked=selected_superscripts[1][1][2])
+                    br
+
+            hr(class='margin_top')
+            div(class='pad_top')
+                button(type='submit') Send!

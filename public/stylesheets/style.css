@@ -1,0 +1,94 @@
+html, body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  display: inline-block;
+}
+
+.paragraph {
+  line-height: 4vh;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(224, 224, 224);
+}
+
+.main_body {
+  background: white;
+  width: 70vw;
+  position: fixed;
+  left: 30vw;
+  height: 50vh;
+}
+
+.white_text {
+  color: rgb(224, 224, 224);
+}
+
+.black_text {
+  color: rgb(39, 39, 39);
+}
+
+.resources {
+  display: inline-block
+}
+
+.logo {
+  padding-top: 4vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  font-size: 3em;
+}
+
+.sidebar {
+  position: fixed;
+  min-height: 100%;
+  background-color: rgb(40, 48, 73);
+  left: 0;
+  top: 0;
+  margin-top: 0;
+  padding-top: 0;
+  width: 30vw;
+  
+}
+
+.content {
+  margin: 2vh;
+  height: 100%;
+}
+
+.info {
+  padding: 2vh;
+  margin-top: 2vh;
+}
+
+.links {
+  padding-top: 2vh;
+}
+
+.formblock {
+  position: fixed;
+  background-color: rgb(40, 48, 73);
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20vw;
+  overflow: scroll;
+}
+
+.inputs {
+  display: inline-block;
+  text-align: right;
+  width: 18vw;
+}
+
+.table {
+  position: fixed;
+  left: 30vw;
+  width: 50vw;
+}
+
+table {
+  margin: auto;
+}

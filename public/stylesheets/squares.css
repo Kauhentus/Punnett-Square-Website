@@ -1,0 +1,39 @@
+.mono {
+    width: 15vw;
+    height: 30.5vh;
+    text-align: center;
+
+    font-size: 10vh;
+    border: solid white;
+    border-width: 1vh;
+}
+
+.di {
+    width: 9vw;
+    height: 17.5vh;
+    text-align: center;
+
+    font-size: 4vh;
+    border: solid white;
+    border-width: 1vh;
+}
+
+.tri {
+    width: 9vw;
+    height: 9.5vh;
+    text-align: center;
+
+    font-size: 2vh;
+    border: solid white;
+    border-width: 0.5vh 0.25vh 0.5vh 0.25vh;
+    letter-spacing: -1px;
+}
+
+th {
+    background: lightblue;
+}
+
+td {
+    background: steelblue;
+}
+

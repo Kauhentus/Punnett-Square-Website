@@ -1,0 +1,58 @@
+extends layouts/layout
+
+block content
+      hr
+      h2(class='white_text')= title
+      p(class='white_text') Solve Punnett Squares
+
+      p(class='white_text') Click on one of the links below to start!
+      hr
+      ul(class='links')
+        a(href='/squares/monohybrid') 
+          p → Monohybrid Cross - 2 x 2
+
+        a(href='/squares/dihybrid') 
+          p → Dihybrid Cross - 4 x 4
+
+        //-a(href='/squares/trihybrid') 
+          p → Trihybrid Cross - 8 x 8
+
+        a(href='/squares/blood_typing') 
+          p → Blood Typing Cross - 2 x 2
+
+block main_body
+  div(class='margin_left_4')
+    h1(class='margin_top_8 black_text') Additional Resources
+
+    div(class='resources')
+      h3 Websites
+      ul
+        a(href='https://en.wikipedia.org/wiki/Punnett_square' class='black_text')
+          p → Punnett Squares - Basic Info
+
+        a(href='http://scienceprimer.com/punnett-square-calculator' class='black_text')
+          p → Calculate Larger Punnett Squares (Up to 5 traits)
+
+        a(href='http://knowgenetics.org/mendelian-genetics/' class='black_text')
+          p → Learn about Mendelian Inheritance
+      
+        a(href='https://en.wikipedia.org/wiki/Mendelian_inheritance' class='black_text')
+          p → In-depth Mendelian Inheritance
+
+    div(class='resources pad_left')
+      h3 Videos
+      ul
+        a(href='https://www.youtube.com/watch?v=CBezq1fFUEA' class='black_text')
+          p → Heredity Crash Course
+
+        a(href='https://www.youtube.com/watch?v=Mehz7tCxjSE' class='black_text')
+          p → TLDR - Mendel and Heredity
+
+        a(href='https://www.youtube.com/watch?v=RX8jxp_WxOs' class='black_text')
+          p → Mendel's Laws and Experiments
+      
+        a(href='https://www.youtube.com/watch?v=Y1PCwxUDTl8' class='black_text')
+          p → How to use Punnett Squares
+
+    p(class='pad_top paragraph black_text') Handpicked websites we selected that introduce the subject of genetics, Mendel's laws, and punnett squares rather well. These websites and this tool merely serve as guide to using punnett squares. You should still have a strong understanding of these concepts before using these resources.
+        

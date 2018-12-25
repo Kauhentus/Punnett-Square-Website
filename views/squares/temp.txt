@@ -1,0 +1,62 @@
+extends ../layouts/square_layout
+
+block content
+    hr
+    h1(class='white_text')= title
+    p(class='white_text') Monohybrid Punnett Square Cross
+    p(class='white_text') 2 x 2 Punnett Square with 1 trait
+    hr  
+
+block square
+    .table
+        table
+            tr
+                th &nbsp;
+                th=_a1[0]
+                th=_a1[1]
+            tr
+                th=_a2[0]
+                td=cross[0][0]
+                td=cross[0][1]
+            tr
+                th=_a2[1]
+                td=cross[1][0]
+                td=cross[1][1]
+    
+block formblock
+    div(class='pad_around')
+        h1(class='white_text center_align') Parameters
+        hr
+
+        form(class='inputs pad_top' method='post' action='')
+            div
+                div
+                    label(for='A1' class='white_text pad_right margin_top') Allele A1
+                    input(type='text', placeholder='A' name='a1' value=def[0])
+                    br
+                div(class='pad_top')
+                    label(for='A1s' class='white_text pad_right margin_top') Superscript A1
+                    input(type='text', placeholder='optional' name='a1s')
+                    br
+                div(class='pad_top')
+                    label(for='A2' class='white_text pad_right') Allele A2
+                    input(type='text', placeholder='a' name='a2' value=def[1])
+                    br
+                div(class='pad_top')
+                    label(for='As2' class='white_text pad_right') Superscript A2
+                    input(type='text', placeholder='optional' name='as2')
+
+            div
+                div(class='pad_top')
+                    label(for='A1d' class='white_text pad_right') A1 Dominant
+                    input(type='radio', name='a1r', value='d', checked='checked')
+                div(class='pad_top')
+                    label(for='A1r' class='white_text pad_right') A1 Recessive
+                    input(type='radio', name='a1r', value='r')
+                div(class='pad_top')
+                    label(for='A1c' class='white_text pad_right') A1 Codominant
+                    input(type='radio', name='a1r', value='c')
+            
+            hr(class='margin_top')
+            div(class='pad_top')
+                button(type='submit') Send!

@@ -1,0 +1,91 @@
+extends ../layouts/square_layout
+
+block content
+    hr
+    h1(class='white_text')= title
+    p(class='white_text') Monohybrid Punnett Square Cross
+    p(class='white_text') 2 x 2 Punnett Square with 1 trait
+    hr  
+
+block square
+    .table
+        table
+            tr
+                th(class='mono') &nbsp;
+                th(class='mono') 
+                    | !{_a1[0][0]}
+                    sup !{_a1[0][1]}
+                th(class='mono')
+                    | !{_a1[1][0]}
+                    sup !{_a1[1][1]}
+            tr
+                th(class='mono')
+                    | !{_a2[0][0]}
+                    sup !{_a2[0][1]}
+                td(class='mono')
+                    | !{cross[0][0][0]}
+                    sup !{cross[0][0][1]}
+                    | !{cross[0][0][2]}
+                    sup !{cross[0][0][3]}
+                td(class='mono')
+                    | !{cross[0][1][0]}
+                    sup !{cross[0][1][1]}
+                    | !{cross[0][1][2]}
+                    sup !{cross[0][1][3]}
+            tr
+                th(class='mono') 
+                    | !{_a2[1][0]}
+                    sup !{_a2[1][1]}
+                td(class='mono')
+                    | !{cross[1][0][0]}
+                    sup !{cross[1][0][1]}
+                    | !{cross[1][0][2]}
+                    sup !{cross[1][0][3]}
+                td(class='mono')
+                    | !{cross[1][1][0]}
+                    sup !{cross[1][1][1]}
+                    | !{cross[1][1][2]}
+                    sup !{cross[1][1][3]}
+    
+block formblock
+    div(class='pad_around')
+        h1(class='white_text center_align') Parameters
+    
+        form(class='inputs pad_top' method='post' action='')
+            hr
+            h2(class='white_text center_align') Parent 1
+            hr
+            div
+                div
+                    label(for='p1_a1' class='white_text pad_right margin_top') Allele 1
+                    input(type='text' name='p1_a1_1' value=def[0][0][0])
+                    label(for='p1_a1_1' class='white_text pad_left') T1
+                    input(type='text' name='p1_a1_2' value=def[0][0][1])
+                    label(for='p1_a1_2' class='white_text pad_left') T2
+                    br
+                div(class='pad_top')
+                    label(for='p1_a1_S' class='white_text pad_right margin_top') Superscript 1
+                    input(type='text', placeholder='optional' name='p1_a1_1s' value=superscripts[0][0][0])
+                    input(type='text', placeholder='optional' name='p1_a1_2s' value=superscripts[0][0][1])
+                    br
+
+            hr(class='margin_top')
+            h2(class='white_text center_align') Parent 2
+            hr
+
+            div
+                div(class='pad_top')
+                    label(for='p2_a1' class='white_text pad_right') Allele 1
+                    input(type='text' name='p2_a1_1' value=def[1][0][0])
+                    label(for='p2_a1_1' class='white_text pad_left') T1
+                    input(type='text' name='p2_a1_2' value=def[1][0][1])
+                    label(for='p2_a1_2' class='white_text pad_left') T2
+                    br
+                div(class='pad_top')
+                    label(for='p2_a1_s' class='white_text pad_right') Superscript 1
+                    input(type='text', placeholder='optional' name='p2_a1_1s' value=superscripts[1][0][0])
+                    input(type='text', placeholder='optional' name='p2_a1_2s' value=superscripts[1][0][1])
+
+            hr(class='margin_top')
+            div(class='pad_top')
+                button(type='submit') Send!

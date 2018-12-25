@@ -1,0 +1,48 @@
+.pad_top {
+    padding-top: 2vh;
+}
+
+.pad_bottom {
+    padding-top: 2vh;
+}
+
+.pad_around {
+    padding: 2vh;
+}
+
+.pad_right {
+    padding-right: 1vw;
+}
+
+.pad_left {
+    padding-left: 1vw;
+}
+
+.margin_top {
+    margin-top: 2vh;
+}
+
+.margin_top_8 {
+    margin-top: 8vh;
+}
+
+.margin_right {
+    margin-right: 2vh;
+}
+
+.margin_left_4 {
+    margin-left: 4vw;
+}
+
+.center_align {
+    text-align: center;
+}
+
+.vertical_align {
+    display: inline;
+    vertical-align: middle;
+}
+
+.width_5vw {
+    width: 5vw;
+}
